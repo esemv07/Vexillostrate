@@ -1,0 +1,112 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4i68vt1gq8qm"]
+
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_mdkhk"]
+[ext_resource type="Texture2D" uid="uid://dn64ox4th4yti" path="res://Assets/Flag Outlines/2-3 Flag Outline.png" id="2_w2jg7"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mdkhk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -240.0
+offset_right = 320.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="2-3FlagOutline" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(320, 240)
+texture = ExtResource("2_w2jg7")
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[node name="TopControls" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -145.0
+offset_top = 30.0
+offset_right = 145.0
+offset_bottom = 61.0
+grow_horizontal = 2
+theme_override_constants/separation = 30
+
+[node name="LineWidthSlider" type="HSlider" parent="TopControls"]
+unique_name_in_owner = true
+z_index = 1
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+min_value = 1.0
+max_value = 20.0
+value = 1.0
+
+[node name="SaveColourButton" type="Button" parent="TopControls"]
+z_index = 1
+layout_mode = 2
+text = "Save Colour"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="TopControls"]
+unique_name_in_owner = true
+z_index = 1
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="DeleteColourButton" type="Button" parent="TopControls"]
+z_index = 1
+layout_mode = 2
+text = "Delete Colour"
+
+[node name="BottomControls" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -24.5
+offset_top = -70.0
+offset_right = 24.5
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ClearButton" type="Button" parent="BottomControls"]
+z_index = 1
+layout_mode = 2
+text = "Clear Canvas"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -10.0
+offset_right = -20.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[connection signal="pressed" from="TopControls/SaveColourButton" to="." method="_on_save_colour_button_pressed"]
+[connection signal="pressed" from="TopControls/DeleteColourButton" to="." method="_on_delete_colour_button_pressed"]
+[connection signal="pressed" from="BottomControls/ClearButton" to="." method="_on_clear_button_pressed"]
