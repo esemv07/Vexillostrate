@@ -5,65 +5,224 @@ extends EditorScript
 const OUTLINE_PATH = "res://Assets/Flag Outlines"
 const OUTLINE_NAME = "Flag Outline.png"
 
-const easy: int = 54
-const medium: int = 83
+const easy: int = 53
+const medium: int = 84
 const hard: int = 60
 
 const COUNTRIES = {
 	EASY = {
-		"argentina": "5-8",
-		"armenia": "1-2",
-		"australia": "1-2",
-		"austria": "2-3",
-		"bangladesh": "3-5",
-		"belgium": "13-15 missing",
-		"brazil": "7-10 missing",
-		"bulgaria": "3-5",
-		"canada": "1-2",
-		"china": "2-3",
-		"colombia": "2-3",
-		"cuba": "1-2",
-		"cyprus": "2-3",
-		"denmark": "28-37 missing",
-		"egypt": "2-3",
-		"estonia": "7-11 missing",
-		"finland": "11-18",
-		"france": "2-3",
-		"germany": "3-5",
-		"greece": "2-3",
-		"hungary": "1-2",
-		"iceland": "18-25 missing",
-		"india": "2-3",
-		"indonesia": "2-3",
-		"ireland": "1-2",
-		"israel": "8-11 missing",
-		"italy": "2-3",
-		"jamaica": "1-2",
-		"japan": "2-3",
-		"latvia": "1-2",
-		"lithuania": "3-5",
-		"luxembourg": "3-5",
-		"mexico": "4-7 missing",
-		"monaco": "4-5 missing",
-		"nepal": "n-ratio missing",
-		"netherlands": "2-3",
-		"new-zealand": "1-2",
-		"norway": "8-11",
-		"peru": "2-3",
-		"philippines": "1-2",
-		"poland": "5-8",
-		"romania": "2-3",
-		"russia": "2-3",
-		"south-africa": "2-3",
-		"s-korea": "2-3",
-		"sweden": "5-8",
-		"switzerland": "1-1",
-		"thailand": "2-3",
-		"turkey": "2-3",
-		"ukraine": "2-3",
-		"uk": "1-2",
-		"usa": "10-19 missing",
-		"vietnam": "2-3",
+		"argentina" = {
+			"name": "Argentina",
+			"ratio": "5-8",
+		},
+		"armenia" = {
+			"name": "Armenia",
+			"ratio": "1-2",
+		},
+		"australia" = {
+			"name": "Australia",
+			"ratio": "1-2",
+		},
+		"austria"= {
+			"name": "Austria",
+			"ratio": "2-3",
+		},
+		"bangladesh" = {
+			"name": "Bangladesh",
+			"ratio": "3-5",
+		},
+		"belgium" = {
+			"name": "Belgium",
+			"ratio": "13-15 missing",
+		},
+		"brazil" = {
+			"name": "Brazil",
+			"ratio": "7-10 missing",
+		},
+		"bulgaria" = {
+			"name": "Bulgaria",
+			"ratio": "3-5",
+		},
+		"canada" = {
+			"name": "Canada",
+			"ratio": "1-2",
+		},
+		"china" = {
+			"name": "China",
+			"ratio": "2-3",
+		},
+		"colombia" = {
+			"name": "Colombia",
+			"ratio": "2-3",
+		},
+		"cuba" = {
+			"name": "Cuba",
+			"ratio": "1-2",
+		},
+		"cyprus" = {
+			"name": "Cyprus",
+			"ratio": "2-3",
+		},
+		"denmark" = {
+			"name": "Denmark",
+			"ratio": "28-37 missing",
+		},
+		"egypt" = {
+			"name": "Egypt",
+			"ratio": "2-3",
+		},
+		"estonia" = {
+			"name": "Estonia",
+			"ratio": "7-11 missing",
+		},
+		"finland" = {
+			"name": "Finland",
+			"ratio": "11-18",
+		},
+		"france" = {
+			"name": "France",
+			"ratio": "2-3",
+		},
+		"germany" = {
+			"name": "Germany",
+			"ratio": "3-5",
+		},
+		"greece" = {
+			"name": "Greece",
+			"ratio": "2-3",
+		},
+		"hungary" = {
+			"name": "Hungary",
+			"ratio": "1-2",
+		},
+		"iceland" = {
+			"name": "Iceland",
+			"ratio": "18-25 missing",
+		},
+		"india" = {
+			"name": "India",
+			"ratio": "2-3",
+		},
+		"indonesia" = {
+			"name": "Indonesia",
+			"ratio": "2-3",
+		},
+		"ireland" = {
+			"name": "Ireland",
+			"ratio": "1-2",
+		},
+		"israel" = {
+			"name": "Israel",
+			"ratio": "8-11 missing",
+		},
+		"italy" = {
+			"name": "Italy",
+			"ratio": "2-3",
+		},
+		"jamaica" = {
+			"name": "Jamaica",
+			"ratio": "1-2",
+		},
+		"japan" = {
+			"name": "Japan",
+			"ratio": "2-3",
+		},
+		"latvia" = {
+			"name": "Latvia",
+			"ratio": "1-2",
+		},
+		"lithuania" = {
+			"name": "Lithuania",
+			"ratio": "3-5",
+		},
+		"luxembourg" = {
+			"name": "Luxembourg",
+			"ratio": "3-5",
+		},
+		"mexico" = {
+			"name": "Mexico",
+			"ratio": "4-7 missing",
+		},
+		"monaco" = {
+			"name": "Monaco",
+			"ratio": "4-5 missing",
+		},
+		"nepal" = {
+			"name": "Nepal",
+			"ratio": "n-ratio missing",
+		},
+		"netherlands" = {
+			"name": "The Netherlands",
+			"ratio": "2-3",
+		},
+		"new-zealand" = {
+			"name": "New Zealand",
+			"ratio": "1-2",
+		},
+		"norway" = {
+			"name": "Norway",
+			"ratio": "8-11",
+		},
+		"peru" = {
+			"name": "Peru",
+			"ratio": "2-3",
+		},
+		"philippines" = {
+			"name": "Philippines",
+			"ratio": "1-2",
+		},
+		"poland" = {
+			"name": "Poland",
+			"ratio": "5-8",
+		},
+		"romania" = {
+			"name": "Romania",
+			"ratio": "2-3",
+		},
+		"russia" = {
+			"name": "Russia",
+			"ratio": "2-3",
+		},
+		"south-africa" = {
+			"name": "South Africa",
+			"ratio": "2-3",
+		},
+		"s-korea" = {
+			"name": "South Korea",
+			"ratio": "2-3",
+		},
+		"sweden" = {
+			"name": "Sweden",
+			"ratio": "5-8",
+		},
+		"switzerland" = {
+			"name": "Switzerland",
+			"ratio": "1-1",
+		},
+		"thailand" = {
+			"name": "Thailand",
+			"ratio": "2-3",
+		},
+		"turkey" = {
+			"name": "Türkiye (Turkey)",
+			"ratio": "2-3",
+		},
+		"ukraine" = {
+			"name": "Ukraine",
+			"ratio": "2-3",
+		},
+		"uk" = {
+			"name": "United Kingdom",
+			"ratio": "1-2",
+		},
+		"usa" = {
+			"name": "United States of America (USA)",
+			"ratio": "10-19 missing",
+		},
+		"vietnam" = {
+			"name": "Vietnam",
+			"ratio": "2-3",
+		},
 	},
 	MEDIUM = {
 		"albania": "5-7 missing",
@@ -120,6 +279,7 @@ const COUNTRIES = {
 		"nigeria": "1-2",
 		"n-korea": "1-2",
 		"pakistan": "2-3",
+		"palestine": "1:2",
 		"panama": "2-3",
 		"png": "3-4 missing",
 		"paraguay": "11-20 missing",
@@ -137,6 +297,7 @@ const COUNTRIES = {
 		"sri-lanka": "1-2",
 		"sudan": "1-2",
 		"syria": "2-3",
+		"taiwan": "2-3",
 		"tanzania": "2-3",
 		"togo": "3-5",
 		"tonga": "1-2",
@@ -176,6 +337,7 @@ const COUNTRIES = {
 		"haiti": "3-5",
 		"kazakhstan": "1-2",
 		"kiribati": "1-2",
+		"kosovo": "5:7 missing",
 		"kuwait": "1-2",
 		"kyrgyzstan": "3-5",
 		"lesotho": "2-3",
@@ -213,17 +375,27 @@ const COUNTRIES = {
 }
 
 
-var country = COUNTRIES["MEDIUM"]["algeria"]
-var statement = "%s/%s %s" % [OUTLINE_PATH, country, OUTLINE_NAME]
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	randomize()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass # Replace with function body.
 
 func _run() -> void:
-	print(statement)
+	pick_random_country()
+
+
+func pick_random_country():
+	var all = COUNTRIES.EASY.keys()
+	var rand = randi() % COUNTRIES.EASY.size()
+	var rand_country = all[rand]
+	var country = COUNTRIES["EASY"][rand_country]["ratio"]
+	var path = "%s/%s %s" % [OUTLINE_PATH, country, OUTLINE_NAME]
+	print(rand)
+	print(path)
+	print(rand_country)
+	print(COUNTRIES["EASY"][rand_country]["name"])
