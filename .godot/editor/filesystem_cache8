@@ -1,0 +1,91 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1753487103
+constants.gd::GDScript::-1::1753354918::0::1::::<>Node<>::
+icon.svg::CompressedTexture2D::2427345336648412439::1753129753::1753487173::1::::<><>::
+README.md::TextFile::-1::1753418527::0::1::::<><>::
+::res://addons/::1753418543
+::res://addons/godot-firebase/::1753418569
+icon.svg::CompressedTexture2D::1932520971276548949::1753130534::1753487173::1::::<><>::
+plugin.cfg::TextFile::-1::1753130534::0::1::::<><>::
+plugin.gd::GDScript::-1::1753130534::0::1::::<>EditorPlugin<>::
+README.md::TextFile::-1::1753130533::0::1::::<><>::
+Utilities.gd::GDScript::-1::1753130533::0::1::::Utilities<>Node<>::
+::res://addons/godot-firebase/auth/::1753130548
+auth.gd::GDScript::-1::1753130533::0::1::::FirebaseAuth<>HTTPRequest<>::
+auth_provider.gd::GDScript::-1::1753130533::0::1::::AuthProvider<>RefCounted<>::
+user_data.gd::GDScript::-1::1753130533::0::1::::FirebaseUserData<>RefCounted<>::
+::res://addons/godot-firebase/auth/providers/::1753130548
+facebook.gd::GDScript::-1::1753130533::0::1::::FacebookProvider<>AuthProvider<>::
+github.gd::GDScript::-1::1753130533::0::1::::GitHubProvider<>AuthProvider<>::
+google.gd::GDScript::-1::1753130533::0::1::::GoogleProvider<>AuthProvider<>::
+twitter.gd::GDScript::-1::1753130533::0::1::::TwitterProvider<>AuthProvider<>::
+::res://addons/godot-firebase/database/::1753130548
+database.gd::GDScript::-1::1753130533::0::1::::FirebaseDatabase<>Node<>::
+database_store.gd::GDScript::-1::1753130533::0::1::::FirebaseDatabaseStore<>Node<>::
+firebase_database_reference.tscn::PackedScene::3743898896187944825::1753130533::0::1::::<><>::res://addons/godot-firebase/database/reference.gd<>uid://ctb4l7plg8kqg::::res://addons/godot-firebase/queues/queueable_http_request.tscn<>res://addons/http-sse-client/HTTPSSEClient.gd<>res://addons/godot-firebase/database/database_store.gd
+firebase_once_database_reference.tscn::PackedScene::9027041200797885914::1753130533::0::1::::<><>::res://addons/godot-firebase/database/once_reference.gd<>uid://ctb4l7plg8kqg::::res://addons/godot-firebase/queues/queueable_http_request.tscn
+once_reference.gd::GDScript::-1::1753130533::0::1::::FirebaseOnceDatabaseReference<>Node<>::
+reference.gd::GDScript::-1::1753130533::0::1::::FirebaseDatabaseReference<>Node<>::
+resource.gd::GDScript::-1::1753130533::0::1::::FirebaseResource<>Resource<>::
+::res://addons/godot-firebase/dynamiclinks/::1753130548
+dynamiclinks.gd::GDScript::-1::1753130533::0::1::::FirebaseDynamicLinks<>Node<>::
+::res://addons/godot-firebase/firebase/::1753130548
+firebase.gd::GDScript::-1::1753130533::0::1::::<>Node<>::
+firebase.tscn::PackedScene::6250566209717982510::1753130533::0::1::::<><>::res://addons/godot-firebase/database/database.gd<>res://addons/godot-firebase/firestore/firestore.gd<>res://addons/godot-firebase/firebase/firebase.gd<>res://addons/godot-firebase/auth/auth.gd<>res://addons/godot-firebase/storage/storage.gd<>res://addons/godot-firebase/dynamiclinks/dynamiclinks.gd<>res://addons/godot-firebase/functions/functions.gd<>uid://5xa6ulbllkjk::::res://addons/godot-firebase/remote_config/firebase_remote_config.tscn
+::res://addons/godot-firebase/firestore/::1753130548
+field_transform.gd::GDScript::-1::1753130533::0::1::::FieldTransform<>FirestoreTransform<>::
+field_transform_array.gd::GDScript::-1::1753130533::0::1::::FieldTransformArray<>RefCounted<>::
+firestore.gd::GDScript::-1::1753130534::0::1::::FirebaseFirestore<>Node<>::
+firestore_collection.gd::GDScript::-1::1753130534::0::1::::FirestoreCollection<>Node<>::
+firestore_document.gd::GDScript::-1::1753130534::0::1::::FirestoreDocument<>Node<>::
+firestore_listener.gd::GDScript::-1::1753130534::0::1::::FirestoreListener<>Node<>::
+firestore_listener.tscn::PackedScene::3975908630060077356::1753130534::0::1::::<><>::res://addons/godot-firebase/firestore/firestore_listener.gd
+firestore_query.gd::GDScript::-1::1753130534::0::1::::FirestoreQuery<>RefCounted<>::
+firestore_task.gd::GDScript::-1::1753130534::0::1::::FirestoreTask<>RefCounted<>::
+firestore_transform.gd::GDScript::-1::1753130534::0::1::::FirestoreTransform<>RefCounted<>::
+::res://addons/godot-firebase/firestore/field_transforms/::1753130548
+decrement_transform.gd::GDScript::-1::1753130533::0::1::::DecrementTransform<>FieldTransform<>::
+increment_transform.gd::GDScript::-1::1753130533::0::1::::IncrementTransform<>FieldTransform<>::
+max_transform.gd::GDScript::-1::1753130533::0::1::::MaxTransform<>FieldTransform<>::
+min_transform.gd::GDScript::-1::1753130533::0::1::::MinTransform<>FieldTransform<>::
+server_timestamp_transform.gd::GDScript::-1::1753130534::0::1::::ServerTimestampTransform<>FieldTransform<>::
+::res://addons/godot-firebase/functions/::1753130548
+functions.gd::GDScript::-1::1753130534::0::1::::FirebaseFunctions<>Node<>::
+function_task.gd::GDScript::-1::1753130534::0::1::::FunctionTask<>RefCounted<>::
+::res://addons/godot-firebase/queues/::1753130548
+queueable_http_request.gd::GDScript::-1::1753130534::0::1::::QueueableHTTPRequest<>HTTPRequest<>::
+queueable_http_request.tscn::PackedScene::6110275915214446166::1753130534::0::1::::<><>::res://addons/godot-firebase/queues/queueable_http_request.gd
+::res://addons/godot-firebase/remote_config/::1753130548
+firebase_remote_config.gd::GDScript::-1::1753130534::0::1::::FirebaseRemoteConfig<>Node<>::
+firebase_remote_config.tscn::PackedScene::2153202424615828940::1753130534::0::1::::<><>::res://addons/godot-firebase/remote_config/firebase_remote_config.gd
+remote_config.gd::GDScript::-1::1753130534::0::1::::RemoteConfig<>RefCounted<>::
+::res://addons/godot-firebase/storage/::1753130548
+storage.gd::GDScript::-1::1753130534::0::1::::FirebaseStorage<>Node<>::
+storage_reference.gd::GDScript::-1::1753130534::0::1::::StorageReference<>Node<>::
+storage_task.gd::GDScript::-1::1753130534::0::1::::StorageTask<>RefCounted<>::
+::res://addons/godot_super-wakatime/::1753129908
+api_key_prompt.tscn::PackedScene::3919262858641749045::1731161396::0::1::::<><>::
+counter.tscn::PackedScene::6849360014225833986::1731161396::0::1::::<><>::
+decompressor.gd::GDScript::-1::1731161396::0::1::::<>RefCounted<>::
+godot_super-wakatime.gd::GDScript::-1::1731161396::0::1::::<>EditorPlugin<>::
+heartbeat.gd::GDScript::-1::1731161396::0::1::::<>RefCounted<>::
+plugin.cfg::TextFile::-1::1753129908::0::1::::<><>::
+README.md::TextFile::-1::1731161396::0::1::::<><>::
+utils.gd::GDScript::-1::1731161396::0::1::::<>RefCounted<>::
+::res://Assets/::1753418546
+::res://Assets/Flag Outlines/::1753230928
+1-1 Flag Outline.png::CompressedTexture2D::5580900440260290469::1753230901::1753487173::1::::<><>::
+1-2 Flag Outline.png::CompressedTexture2D::3891836977206165498::1753230913::1753487173::1::::<><>::
+2-3 Flag Outline.png::CompressedTexture2D::8137499776364650214::1753230883::1753487173::1::::<><>::
+3-5 Flag Outline.png::CompressedTexture2D::2373374603284168789::1753230866::1753487173::1::::<><>::
+5-8 Flag Outline.png::CompressedTexture2D::1253515862168171724::1753230844::1753487173::1::::<><>::
+::res://Scenes/::1753418546
+authetification.gd::GDScript::-1::1753175425::0::1::::<>Control<>::
+authetification.tscn::PackedScene::5087583911276780160::1753350584::0::1::::<><>::res://Scenes/authetification.gd
+game.gd::GDScript::-1::1753350245::0::1::::<>Control<>::
+game.tscn::PackedScene::6826775146427884944::1753354918::0::1::::<><>::res://Scenes/game.gd<>uid://dn64ox4th4yti::::res://Assets/Flag Outlines/2-3 Flag Outline.png
+home_screen.gd::GDScript::-1::1753250194::0::1::::<>Control<>::
+home_screen.tscn::PackedScene::6754537892934097715::1753350584::0::1::::<><>::res://Scenes/home_screen.gd
+::res://UI Elements/::1753418546
+color_swatch.gd::GDScript::-1::1753252595::0::1::::<>Button<>::
+color_swatch.tscn::PackedScene::4001377024680160986::1753350584::0::1::::<><>::res://UI Elements/color_swatch.gd
