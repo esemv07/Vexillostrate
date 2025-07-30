@@ -1,6 +1,4 @@
 res://Scenes/game.tscn
-res://Scenes/game.gd
-res://Scenes/authetification.tscn
-res://Scenes/home_screen.tscn
-res://constants.gd
 res://Scenes/home_screen.gd
+res://Scenes/home_screen.tscn
+res://Scenes/authetification.tscn

@@ -1,7 +1,11 @@
-Label
-CheckBox
-HBoxContainer
+TextureRect
 Button
+Label
 VBoxContainer
 PanelContainer
+HBoxContainer
+TextEdit
+SubViewportContainer
+SubViewport
+CheckBox
 TextureButton

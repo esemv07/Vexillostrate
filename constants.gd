@@ -808,29 +808,13 @@ const COUNTRIES = {
 }
 
 
+var username = "no username"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	randomize()
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass # Replace with function body.
-
-
-func pick_random_country():
-	var all_diff = COUNTRIES.keys()
-	var rand_diff = randi() % COUNTRIES.size()
-	var difficulty = all_diff[rand_diff]
-	print(difficulty)
-	var all = COUNTRIES[difficulty].keys()
-	var rand = randi() % COUNTRIES[difficulty].size()
-	var rand_country = all[rand]
-	var country = COUNTRIES[difficulty][rand_country]["ratio"]
-	var path = "%s/%s %s" % [OUTLINE_PATH, country, OUTLINE_NAME]
-	print(rand)
-	print(path)
-	print(rand_country)
-	print(COUNTRIES[difficulty][rand_country]["name"])
-	print("")
