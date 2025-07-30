@@ -50,6 +50,47 @@ theme_override_font_sizes/font_size = 26
 text = "~ Vexillostrate ~"
 horizontal_alignment = 1
 
+[node name="DiffBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="EasyCheckBox" type="CheckBox" parent="VBoxContainer/DiffBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Easy"
+alignment = 1
+
+[node name="MediumCheckBox" type="CheckBox" parent="VBoxContainer/DiffBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Medium"
+
+[node name="HardCheckBox" type="CheckBox" parent="VBoxContainer/DiffBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Hard"
+
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Play Game"
@@ -57,6 +98,13 @@ text = "Play Game"
 [node name="LogoutButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Logout"
+
+[node name="ErrorLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Error: Please select at least 1 difficulty"
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/LogoutButton" to="." method="_on_logout_button_pressed"]

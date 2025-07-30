@@ -6,7 +6,8 @@ var game_screen = "res://Scenes/game.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	%ErrorLabel.visible = false
+	Constants.DIFFICULTY = []
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,4 +21,15 @@ func _on_logout_button_pressed() -> void:
 
 
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file(game_screen)
+	if %EasyCheckBox.button_pressed:
+		Constants.DIFFICULTY.append("EASY")
+	if %MediumCheckBox.button_pressed:
+		Constants.DIFFICULTY.append("MEDIUM")
+	if %HardCheckBox.button_pressed:
+		Constants.DIFFICULTY.append("HARD")
+	
+	if !%EasyCheckBox.button_pressed and !%MediumCheckBox.button_pressed and !%HardCheckBox.button_pressed:
+		%ErrorLabel.visible = true
+	else:
+		%ErrorLabel.visible = false
+		get_tree().change_scene_to_file(game_screen)

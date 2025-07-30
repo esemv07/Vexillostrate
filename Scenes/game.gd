@@ -8,6 +8,8 @@ extends Control
 # var active_colour = colour_picker.get_pick_color()
 # var width = width_slider.value
 
+var home_screen = "res://Scenes/home_screen.tscn"
+
 var _pressed: bool = false
 var _current_line: Line2D = null
 
@@ -28,6 +30,8 @@ func _ready() -> void:
 		var hex_colour = swatch.colour.to_html(false)
 		$VBoxContainer.add_child(swatch)
 		swatch.pressed.connect(_on_colour_swatch_pressed.bind(hex_colour, swatch.name))
+	$ControlPanelContainer.visible = false
+	pick_random_country()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -76,3 +80,28 @@ func _on_delete_colour_button_pressed() -> void:
 	var colour_path = "VBoxContainer/%s" %curr_colour
 	var remove_colour = get_node(colour_path)
 	$VBoxContainer.remove_child(remove_colour)
+
+
+func pick_random_country():
+	var difficulty = Constants.DIFFICULTY.pick_random()
+	var all = Constants.COUNTRIES[difficulty].keys()
+	var rand = randi() % Constants.COUNTRIES[difficulty].size()
+	var rand_country = all[rand]
+	var country = Constants.COUNTRIES[difficulty][rand_country]["ratio"]
+	var path = "%s/%s %s" % [Constants.OUTLINE_PATH, country, Constants.OUTLINE_NAME]
+	var outline = load(path)
+	$FlagOutline.texture = outline
+	var name = Constants.COUNTRIES[difficulty][rand_country]["name"]
+	%CountryLabel.text = name
+
+
+func _on_home_button_pressed() -> void:
+	get_tree().change_scene_to_file(home_screen)
+
+
+func _on_controls_button_pressed() -> void:
+	$ControlPanelContainer.visible = true
+
+
+func _on_back_button_pressed() -> void:
+	$ControlPanelContainer.visible = false
