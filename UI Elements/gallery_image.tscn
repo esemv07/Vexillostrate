@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf5fqxbujocbx"]
+
+[ext_resource type="Script" path="res://UI Elements/gallery_image.gd" id="1_8dfba"]
+[ext_resource type="Texture2D" uid="uid://bat3a1wfibf0j" path="res://icon.svg" id="1_olq43"]
+
+[node name="GalleryImage" type="Control"]
+custom_minimum_size = Vector2(180, 200)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 200.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_8dfba")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(180, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.290196, 0.282353, 0.392157, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = 10.0
+offset_right = 64.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FlagDrawing" type="TextureRect" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture = ExtResource("1_olq43")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CountryName" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "[Country Name]"
+horizontal_alignment = 1
+
+[node name="DrawnDate" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "[Date]"
+horizontal_alignment = 1

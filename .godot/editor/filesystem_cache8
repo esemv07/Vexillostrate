@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1754467527
+::res://::1754563203
 constants.gd::GDScript::-1::1754088032::0::1::::<>Node2D<>::
 icon.svg::CompressedTexture2D::2427345336648412439::1753129753::1753487173::1::::<><>::
 README.md::TextFile::-1::1753418527::0::1::::<><>::
@@ -114,14 +114,18 @@ belgium.png::CompressedTexture2D::2892969141216270974::1754301107::1754301115::1
 ::res://Assets/tests/::1754091339
 test_save1.png::CompressedTexture2D::7874214994861596827::1754091332::1754091339::1::::<><>::
 test_save.png::CompressedTexture2D::5282207172093713956::1754090382::1754090386::1::::<><>::
-::res://Scenes/::1754460550
+::res://Scenes/::1754562855
 authetification.gd::GDScript::-1::1753175425::0::1::::<>Control<>::
-authetification.tscn::PackedScene::5087583911276780160::1754460388::0::1::::<><>::res://Scenes/authetification.gd
-game.gd::GDScript::-1::1754460427::0::1::::<>Control<>::
-game.tscn::PackedScene::6826775146427884944::1754460550::0::1::::<><>::res://Scenes/game.gd<>uid://dn64ox4th4yti::::res://Assets/Flag Outlines/2-3 Flag Outline.png<>uid://bd05d1ohjbkc::::res://Assets/home.png<>uid://dyro6sm27i2aj::::res://Assets/controls.png<>uid://dtvagwovd2sen::::res://Assets/world-flags.png
-home_screen.gd::GDScript::-1::1754455098::0::1::::<>Control<>::
-home_screen.tscn::PackedScene::6754537892934097715::1754460389::0::1::::<><>::res://Scenes/home_screen.gd<>uid://b8c7gfjm3334v::::res://Assets/profile.png
-::res://UI Elements/::1753418546
+authetification.tscn::PackedScene::5087583911276780160::1754562816::0::1::::<><>::res://Scenes/authetification.gd
+gallery.gd::GDScript::-1::1754562851::0::1::::<>Control<>::
+gallery.tscn::PackedScene::695238433648786009::1754562851::0::1::::<><>::res://Scenes/gallery.gd
+game.gd::GDScript::-1::1754556833::0::1::::<>Control<>::
+game.tscn::PackedScene::6826775146427884944::1754562816::0::1::::<><>::res://Scenes/game.gd<>uid://dn64ox4th4yti::::res://Assets/Flag Outlines/2-3 Flag Outline.png<>uid://bd05d1ohjbkc::::res://Assets/home.png<>uid://dyro6sm27i2aj::::res://Assets/controls.png<>uid://dtvagwovd2sen::::res://Assets/world-flags.png
+home_screen.gd::GDScript::-1::1754541931::0::1::::<>Control<>::
+home_screen.tscn::PackedScene::6754537892934097715::1754562816::0::1::::<><>::res://Scenes/home_screen.gd<>uid://b8c7gfjm3334v::::res://Assets/profile.png
+::res://UI Elements/::1754562816
 color_swatch.gd::GDScript::-1::1753252595::0::1::::<>Button<>::
 color_swatch.tscn::PackedScene::4001377024680160986::1753350584::0::1::::<><>::res://UI Elements/color_swatch.gd
-::res://Updates/::1754094060
+gallery_image.gd::GDScript::-1::1754558557::0::1::::<>Control<>::
+gallery_image.tscn::PackedScene::2799629602674512769::1754562816::0::1::::<><>::res://UI Elements/gallery_image.gd<>uid://bat3a1wfibf0j::::res://icon.svg
+::res://Updates/::1754473317

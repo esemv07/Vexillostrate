@@ -7,13 +7,16 @@ extends Control
 
 @onready var submitted = false
 
-var COLLECTION_ID = "gallery_images"
+var curr_image_url = ""
+var curr_country = ""
+var COLLECTION_ID = "user_details"
 var API_URL = "https://api.cloudinary.com/v1_1/db5vkjpwu/image/upload"
 
 # var active_colour = colour_picker.get_pick_color()
 # var width = width_slider.value
 
 var home_screen = "res://Scenes/home_screen.tscn"
+var gallery = "res://Scenes/gallery.tscn"
 
 var _pressed: bool = false
 var _current_line: Line2D = null
@@ -102,6 +105,7 @@ func pick_random_country():
 	$FlagOutline.texture = outline
 	var name = Constants.COUNTRIES[difficulty][rand_country]["name"]
 	%CountryLabel.text = name
+	curr_country = name
 	# Prepare Rect for Screenshot Image
 	var rect_pos = Constants.RATIO_DIMENSIONS[country]["position"]
 	var rect_size = Constants.RATIO_DIMENSIONS[country]["size"]
@@ -144,24 +148,38 @@ func _on_save_button_pressed() -> void:
 	upload_image_to_cloudinary(image_bytes, API_URL)
 
 
-func save_image_url(image_url):
+func save_image_url():
 	var auth = Firebase.Auth.auth
 	if auth.localid:
 		var collection: FirestoreCollection = Firebase.Firestore.collection(COLLECTION_ID)
-		var image = image_url
+		var image_url = curr_image_url
 		var data: Dictionary = {
-			"image": image,
+			"images": [{
+				"url": image_url,
+				"country": curr_country
+				}],
 		}
 		var document = await collection.get_doc(auth.localid)
 		if document:
-			await collection.update(update_data(document, image))
+			await collection.update(update_data(document))
 		else:
 			await collection.add(auth.localid, data)
 
 
-func update_data(document : FirestoreDocument, image) -> FirestoreDocument:
-	if document.get_value("image"):
-		document["image"] = image
+func update_data(document : FirestoreDocument) -> FirestoreDocument:
+	if document.get_value("images"):
+		var images = document.get_value("images")
+		var data: Dictionary = {
+			"url": curr_image_url,
+			"country": curr_country
+		}
+		images.append(data)
+		document["images"] = images
+	else:
+		document["images"] = [{
+				"url": curr_image_url,
+				"country": curr_country
+				}]
 	return document
 
 
@@ -205,8 +223,14 @@ func _on_image_upload_completed(result: int, response_code: int, headers: Packed
 		if response_json and response_json.has("url"):
 			var image_url = response_json["url"]
 			print("Image uploaded successfully. URL: ", image_url)
+			curr_image_url = image_url
+			save_image_url()
 		else:
 			print("API response did not contain a URL.")
 	else:
 		print("Image upload failed with code: ", response_code)
 		print("Response body: ", body.get_string_from_utf8())
+
+
+func _on_gallery_button_pressed() -> void:
+	get_tree().change_scene_to_file(gallery)
