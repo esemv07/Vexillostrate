@@ -140,8 +140,6 @@ func _on_submit_button_pressed() -> void:
 	$SubmitPanelContainer.visible = true
 
 
-
-### CURRENTLY NOT WORKING ###
 func _on_save_button_pressed() -> void:
 	var image_save = %TextureRect.texture.get_image()
 	var image_bytes = image_save.save_png_to_buffer()
@@ -153,10 +151,12 @@ func save_image_url():
 	if auth.localid:
 		var collection: FirestoreCollection = Firebase.Firestore.collection(COLLECTION_ID)
 		var image_url = curr_image_url
+		var date = Time.get_date_string_from_system()
 		var data: Dictionary = {
 			"images": [{
 				"url": image_url,
-				"country": curr_country
+				"country": curr_country,
+				"date": date
 				}],
 		}
 		var document = await collection.get_doc(auth.localid)
@@ -167,18 +167,21 @@ func save_image_url():
 
 
 func update_data(document : FirestoreDocument) -> FirestoreDocument:
+	var date = Time.get_date_string_from_system()
 	if document.get_value("images"):
 		var images = document.get_value("images")
 		var data: Dictionary = {
 			"url": curr_image_url,
-			"country": curr_country
+			"country": curr_country,
+			"date": date
 		}
 		images.append(data)
 		document["images"] = images
 	else:
 		document["images"] = [{
 				"url": curr_image_url,
-				"country": curr_country
+				"country": curr_country,
+				"date": date
 				}]
 	return document
 

@@ -1,7 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://j51qfufwwmwn"]
+[gd_scene load_steps=8 format=3 uid="uid://j51qfufwwmwn"]
 
 [ext_resource type="Script" path="res://Scenes/gallery.gd" id="1_08ody"]
-[ext_resource type="Texture2D" uid="uid://bat3a1wfibf0j" path="res://icon.svg" id="2_34xh4"]
+[ext_resource type="Texture2D" uid="uid://b8c7gfjm3334v" path="res://Assets/profile.png" id="2_boypv"]
+[ext_resource type="Texture2D" uid="uid://bd05d1ohjbkc" path="res://Assets/home.png" id="3_2yend"]
+[ext_resource type="Texture2D" uid="uid://dyro6sm27i2aj" path="res://Assets/controls.png" id="4_up2wn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ufgum"]
+bg_color = Color(0.289182, 0.281188, 0.393334, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.377919, 0.377919, 0.377919, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1ox1"]
+bg_color = Color(0.290196, 0.282353, 0.392157, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.290196, 0.282353, 0.392157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_imbwj"]
+bg_color = Color(0.289182, 0.281188, 0.393334, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
 
 [node name="Gallery" type="Control"]
 layout_mode = 3
@@ -11,6 +52,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_08ody")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
@@ -52,15 +95,195 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 3
 
-[node name="HTTPRequest" type="HTTPRequest" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -359.0
-offset_bottom = -263.0
+offset_left = -55.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="UsernameLabel" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "username"
+
+[node name="ProfileButton" type="Button" parent="HBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+icon = ExtResource("2_boypv")
+flat = true
+icon_alignment = 2
+expand_icon = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+z_index = 2
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_34xh4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ufgum")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Username:"
+horizontal_alignment = 1
+
+[node name="UsernameEdit" type="TextEdit" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "username"
+placeholder_text = "Enter username..."
+
+[node name="ControlButtons" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SaveButton" type="Button" parent="PanelContainer/VBoxContainer/ControlButtons"]
+layout_mode = 2
+text = "Save"
+
+[node name="BackButton" type="Button" parent="PanelContainer/VBoxContainer/ControlButtons"]
+layout_mode = 2
+text = "Back"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.0
+offset_top = 40.0
+offset_right = 91.0
+offset_bottom = 90.0
+grow_horizontal = 2
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "~ Gallery ~"
+horizontal_alignment = 1
+
+[node name="DescLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "See all your saved flag drawings"
+horizontal_alignment = 1
+
+[node name="DateLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "(Note: Date is YYYY-MM-DD)"
+horizontal_alignment = 1
+
+[node name="NoSavesLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 10.0
+offset_right = 160.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_a1ox1")
+text = "No saved drawings... play and save your drawings to see them appear here"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HomeControls" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 104.0
+
+[node name="HomeButton" type="Button" parent="HomeControls"]
+z_index = 1
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+icon = ExtResource("3_2yend")
+flat = true
+expand_icon = true
+
+[node name="ControlsButton" type="Button" parent="HomeControls"]
+z_index = 1
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+icon = ExtResource("4_up2wn")
+flat = true
+expand_icon = true
+
+[node name="ControlPanelContainer" type="PanelContainer" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_imbwj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlPanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="ControlsLabel" type="Label" parent="ControlPanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="ControlPanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Back"
+
+[connection signal="pressed" from="HBoxContainer/ProfileButton" to="." method="_on_profile_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ControlButtons/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ControlButtons/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="HomeControls/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="HomeControls/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="ControlPanelContainer/VBoxContainer/BackButton" to="." method="_on_controls_back_button_pressed"]

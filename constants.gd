@@ -444,7 +444,7 @@ const COUNTRIES = {
 		},
 		"palestine" = {
 			"name": "Palestine",
-			"ratio": "1:2",
+			"ratio": "1-2",
 		},
 		"panama" = {
 			"name": "Panama",

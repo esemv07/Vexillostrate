@@ -5,10 +5,16 @@ extends Control
 var Card: PackedScene = preload("res://UI Elements/gallery_image.tscn")
 var COLLECTION_ID = "user_details"
 var image_texture: Texture
+var home_screen = "res://Scenes/home_screen.tscn"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$PanelContainer.visible = false
+	$NoSavesLabel.visible = false
+	$ControlPanelContainer.visible = false
+	load_data()
+	
 	http_request.request_completed.connect(_on_http_request_completed)
 	
 	var auth = Firebase.Auth.auth
@@ -25,7 +31,10 @@ func _ready() -> void:
 					var card = Card.instantiate()
 					card.image = image_texture
 					card.country = image["country"]
+					card.date = image["date"]
 					%GridContainer.add_child(card)
+			else:
+				$NoSavesLabel.visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -41,12 +50,72 @@ func _on_http_request_completed(result: int, response_code: int, headers: Packed
 		var error = image.load_png_from_buffer(body)
 		
 		if error == OK:
-			var texture = ImageTexture.new()
-			texture.create_from_image(image)
+			var texture: ImageTexture = ImageTexture.create_from_image(image)
 			image_texture = texture
-			$TextureRect.texture = texture
 			print("Image loaded successfully.")
 		else:
 			print("Error loading image from buffer: %s" % error)
 	else:
 		print("HTTP request failed with response code: %d" % response_code)
+
+
+func save_username():
+	var auth = Firebase.Auth.auth
+	if auth.localid:
+		var collection: FirestoreCollection = Firebase.Firestore.collection(COLLECTION_ID)
+		var username = %UsernameEdit.text
+		var data: Dictionary = {
+			"username": username,
+		}
+		var document = await collection.get_doc(auth.localid)
+		if document:
+			await collection.update(update_data(document))
+		else:
+			await collection.add(auth.localid, data)
+
+
+func update_data(document : FirestoreDocument) -> FirestoreDocument:
+	if document.get_value("username"):
+		document["username"] = %UsernameEdit.text
+		%UsernameLabel.text = document["username"]
+	return document
+
+
+func load_data():
+	var auth = Firebase.Auth.auth
+	if auth.localid:
+		var collection: FirestoreCollection = Firebase.Firestore.collection(COLLECTION_ID)
+		var document = await collection.get_doc(auth.localid)
+		if document:
+			if document.get_value("username"):
+				%UsernameEdit.text = document.get_value("username")
+				%UsernameLabel.text = document.get_value("username")
+				Constants.username = document.get_value("username")
+		elif document:
+			print(document.error)
+		else:
+			print("No document found")
+
+
+func _on_profile_button_pressed() -> void:
+	$PanelContainer.visible = true
+
+
+func _on_save_button_pressed() -> void:
+	save_username()
+
+
+func _on_back_button_pressed() -> void:
+	$PanelContainer.visible = false
+
+
+func _on_home_button_pressed() -> void:
+	get_tree().change_scene_to_file(home_screen)
+
+
+func _on_controls_back_button_pressed() -> void:
+	$ControlPanelContainer.visible = false
+
+
+func _on_controls_button_pressed() -> void:
+	$ControlPanelContainer.visible = true

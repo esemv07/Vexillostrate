@@ -1,8 +1,8 @@
-TextureRect
+Label
 VBoxContainer
+TextureRect
 HTTPRequest
 ColorRect
-Label
 ScrollContainer
 GridContainer
 Button

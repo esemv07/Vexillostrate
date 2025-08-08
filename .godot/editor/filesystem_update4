@@ -1,7 +1,10 @@
-res://UI Elements/gallery_image.tscn
+res://Scenes/gallery.tscn
 res://Scenes/home_screen.gd
 res://Scenes/authetification.tscn
 res://Scenes/game.tscn
 res://Scenes/home_screen.tscn
-res://Scenes/gallery.tscn
+res://UI Elements/gallery_image.tscn
+res://Scenes/game.gd
 res://Scenes/gallery.gd
+res://constants.gd
+res://UI Elements/gallery_image.gd
