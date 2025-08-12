@@ -1,9 +1,9 @@
 Label
 VBoxContainer
-TextureRect
-HTTPRequest
 ColorRect
+TextureRect
 ScrollContainer
+HTTPRequest
 GridContainer
 Button
 ReferenceRect

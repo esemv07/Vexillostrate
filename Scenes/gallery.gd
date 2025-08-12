@@ -32,6 +32,7 @@ func _ready() -> void:
 					card.image = image_texture
 					card.country = image["country"]
 					card.date = image["date"]
+					card.score = "Accuracy: %d%%" % image["score"]
 					%GridContainer.add_child(card)
 			else:
 				$NoSavesLabel.visible = true

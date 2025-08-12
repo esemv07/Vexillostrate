@@ -1,0 +1,14 @@
+res://addons/godot-firebase/database/firebase_database_reference.tscn::c15649e4167586e17e0013336115edc9::1753130533::res://.godot/exported/133200997/export-0ef69a81e527c1857d021929654998b9-firebase_database_reference.scn
+res://addons/godot-firebase/database/firebase_once_database_reference.tscn::8907a93c4c88d070d0ca646603304366::1753130533::res://.godot/exported/133200997/export-a3a60f3103ba469285ab260062b5d4b6-firebase_once_database_reference.scn
+res://addons/godot-firebase/firebase/firebase.tscn::89982fcb99f688c066fd2090da65d308::1753130533::res://.godot/exported/133200997/export-3c03e2f0e0b3ccc8935ab462dd7f31f1-firebase.scn
+res://addons/godot-firebase/firestore/firestore_listener.tscn::e3dbcd1372d30c4495e4095d88634226::1753130534::res://.godot/exported/133200997/export-a7417b6b21b8dd830dc5e902752bc868-firestore_listener.scn
+res://addons/godot-firebase/queues/queueable_http_request.tscn::e3cb8c9aa327ead556794dcb348fd16b::1753130534::res://.godot/exported/133200997/export-5d563975a4c3de756e6cbaedaa77fb19-queueable_http_request.scn
+res://addons/godot-firebase/remote_config/firebase_remote_config.tscn::e7fe603ecb8850638123f7f813069037::1753130534::res://.godot/exported/133200997/export-69f609f8cf119fd685a73f12eb22cee9-firebase_remote_config.scn
+res://addons/godot_super-wakatime/api_key_prompt.tscn::a6988a5ba43d5aa92a08f216c1db28db::1731161396::res://.godot/exported/133200997/export-cd8705cb5e2533bd79c64579ac674dae-api_key_prompt.scn
+res://addons/godot_super-wakatime/counter.tscn::7f13ad35960e259f6de719f9785ce249::1731161396::res://.godot/exported/133200997/export-4af6c9115c1c285af5925fa1ce6a526e-counter.scn
+res://Scenes/authetification.tscn::682ab43232c892f2cdebaa023a64a05a::1754949651::res://.godot/exported/133200997/export-70aeeb61c6f191b6d40ced059bb6abc0-authetification.scn
+res://Scenes/gallery.tscn::a82e646a9a081c9f2a2d006bdf7d7854::1754949652::res://.godot/exported/133200997/export-5cde0cf00889f6c382e96324c4fd9a60-gallery.scn
+res://Scenes/game.tscn::f9b69a3c62a10e9e7e95b6e3d29c6471::1754949661::res://.godot/exported/133200997/export-d45e16ca8d170891778b9dcfa9c69e68-game.scn
+res://Scenes/home_screen.tscn::646f3f0f637d206cfd0a44bb03a7094d::1754949652::res://.godot/exported/133200997/export-782f1eb92e25fd770a531e6846a915ef-home_screen.scn
+res://UI Elements/color_swatch.tscn::90fd7aebf881216672b1fef18c43f159::1753350584::res://.godot/exported/133200997/export-6f071524f7ac021953d6c755d3a4c872-color_swatch.scn
+res://UI Elements/gallery_image.tscn::41637a0786908102147f7aed108a74c1::1754949652::res://.godot/exported/133200997/export-77023de6f42d90f59606b84f3fd2eb61-gallery_image.scn

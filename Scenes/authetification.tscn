@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceqp0738y5va3"]
+[gd_scene load_steps=3 format=3 uid="uid://ceqp0738y5va3"]
 
 [ext_resource type="Script" path="res://Scenes/authetification.gd" id="1_b5d1b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jfe0o"]
+content_margin_left = 10.0
+bg_color = Color(0.145098, 0.298039, 0.498039, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
 
 [node name="User Auth" type="Control"]
 layout_mode = 3
@@ -43,10 +53,17 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "~ Vexillostrate ~"
+horizontal_alignment = 1
+
 [node name="StateLabel" type="Label" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_jfe0o")
 text = "Not logged in"
 
 [node name="EmailLineEdit" type="LineEdit" parent="VBoxContainer"]

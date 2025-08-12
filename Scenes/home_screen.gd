@@ -63,6 +63,7 @@ func load_data():
 
 
 func _on_play_button_pressed() -> void:
+	%LoadingLabel.visible = true
 	if %EasyCheckBox.button_pressed:
 		Constants.DIFFICULTY.append("EASY")
 	if %MediumCheckBox.button_pressed:

@@ -148,10 +148,10 @@ const COUNTRIES = {
 			"name": "Monaco",
 			"ratio": "4-5",
 		},
-		"nepal" = {
-			"name": "Nepal",
-			"ratio": "N-Ratio",
-		},
+		#"nepal" = {
+			#"name": "Nepal",
+			#"ratio": "N-Ratio",
+		#},
 		"netherlands" = {
 			"name": "The Netherlands",
 			"ratio": "2-3",
@@ -247,7 +247,7 @@ const COUNTRIES = {
 			"ratio": "1-2",
 		},
 		"bahamas" = {
-			"name": "Bahamas",
+			"name": "The Bahamas",
 			"ratio": "1-2",
 		},
 		"bahrain" = {
@@ -567,74 +567,161 @@ const COUNTRIES = {
 		"afghanistan" = {
 			"name": "Afghanistan",
 			"ratio": "1-2",
+			"colours": [],
 		},
 		"andorra" = {
 			"name": "Andorra",
 			"ratio": "7-10",
+			"colours": [
+				"10069F",
+				"FEDD00",
+				"D50032",
+				"C6AA76",
+			],
 		},
 		"belarus" = {
 			"name": "Belarus",
 			"ratio": "1-2",
+			"colours": [
+				"D22730",
+				"00AF66",
+			],
 		},
 		"belize" = {
 			"name": "Belize",
 			"ratio": "3-5",
+			"colours": [
+				"D90F19",
+				"171696",
+			],
 		},
 		"benin" = {
 			"name": "Benin",
 			"ratio": "2-3",
+			"colours": [
+				"008751",
+				"FCD116",
+				"E8112D",
+			],
 		},
 		"bhutan" = {
 			"name": "Bhutan",
 			"ratio": "2-3",
+			"colours": [
+				"FFCD00",
+				"FF6720",
+			],
 		},
 		"bosnia" = {
 			"name": "Bosnia and Herzegovina",
 			"ratio": "1-2",
+			"colours": [
+				"002F6C",
+				"FFCD00",
+			],
 		},
 		"brunei" = {
 			"name": "Brunei",
 			"ratio": "1-2",
+			"colours": [
+				"FCE300",
+				"EF3340",
+			],
 		},
 		"cabo-verde" = {
 			"name": "Cabo Verde (Cape Verde)",
 			"ratio": "10-17",
+			"colours": [
+				"003DA5",
+				"EF3340",
+				"FFD100",
+			],
 		},
 		"car" = {
 			"name": "Central African Republic",
-			"ratio": "3-5",
+			"ratio": "2-3",
+			"colours": [
+				"003082",
+				"289728",
+				"FFCE00",
+				"D21034",
+			],
 		},
 		"comoros" = {
 			"name": "Comoros",
 			"ratio": "3-5",
+			"colours": [
+				"FFD100",
+				"EF3340",
+				"003DA5",
+				"009739",
+			],
 		},
 		"drc" = {
 			"name": "Democratic Republic of the Congo (DRC)",
 			"ratio": "3-4",
+			"colours": [
+				"0085CA",
+				"FFD100",
+				"EF3340",
+			],
 		},
 		"rep-congo" = {
 			"name": "Republic of the Congo",
 			"ratio": "2-3",
+			"colours": [
+				"009543",
+				"FBDE4A",
+				"DC241F",
+			],
 		},
 		"djibouti" = {
 			"name": "Djibouti",
 			"ratio": "2-3",
+			"colours": [
+				"6AB2E7",
+				"D7141A",
+				"12AD2B",
+			],
 		},
 		"dominica" = {
 			"name": "Dominica",
 			"ratio": "1-2",
+			"colours": [
+				"009A44",
+				"FFCD00",
+				"E4002B",
+				"981E97",
+			],
 		},
 		"dominican-rep" = {
 			"name": "Dominican Republic",
 			"ratio": "5-8",
+			"colours": [
+				"002D62",
+				"CE1126",
+				"006300",
+				"EAC102",
+			]
 		},
 		"el-salvador" = {
 			"name": "El Salvador",
 			"ratio": "189-335",
+			"colours": [
+				"0047AB",
+				"FCE300",
+				"E60000",
+				"009900",
+			]
 		},
 		"eq-guinea" = {
 			"name": "Equatorial Guinea",
 			"ratio": "2-3",
+			"colours": [
+				"3E9A00",
+				"0073CE",
+				"E32118",
+			]
 		},
 		"eritrea" = {
 			"name": "Eritrea",
@@ -892,8 +979,8 @@ const RATIO_DIMENSIONS = {
 		"size": [370, 280],
 		"position": [135, 100]
 	},
-	"189-334" = {
-		"size": [420, 235],
+	"189-335" = {
+		"size": [420, 237],
 		"position": [110, 122.5]
 	},
 	"N-Ratio **" = {
