@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1754943752
+::res://::1754963812
 constants.gd::GDScript::-1::1754889611::0::1::::<>Node2D<>::
-export_presets.cfg::TextFile::-1::1754910710::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1754949726::0::1::::<><>::
 icon.svg::CompressedTexture2D::2427345336648412439::1753129753::1754884127::1::::<><>::
 README.md::TextFile::-1::1753418527::0::1::::<><>::
 ::res://addons/::1753418543
@@ -305,23 +305,23 @@ yemen.png::CompressedTexture2D::3237687824875732779::1754797119::1754884065::1::
 ::res://Assets/tests/::1754884065
 test_save1.png::CompressedTexture2D::7874214994861596827::1754091332::1754884065::1::::<><>::
 test_save.png::CompressedTexture2D::5282207172093713956::1754090382::1754884065::1::::<><>::
-::res://Exports/::1754911844
+::res://Exports/::1754950153
 export_presets.cfg::TextFile::-1::1754906460::0::1::::<><>::
-index.apple-touch-icon.png::CompressedTexture2D::4239584287344569141::1754911589::1754944455::1::::<><>::
-index.icon.png::CompressedTexture2D::6327496984626888664::1754911589::1754944455::1::::<><>::
-index.png::CompressedTexture2D::6175474691440278386::1754911589::1754944455::1::::<><>::
-::res://Scenes/::1754912167
+index.apple-touch-icon.png::CompressedTexture2D::4239584287344569141::1754950143::1754963813::1::::<><>::
+index.icon.png::CompressedTexture2D::6327496984626888664::1754950143::1754963813::1::::<><>::
+index.png::CompressedTexture2D::6175474691440278386::1754950143::1754963813::1::::<><>::
+::res://Scenes/::1754952341
 authetification.gd::GDScript::-1::1753175425::0::1::::<>Control<>::
-authetification.tscn::PackedScene::5087583911276780160::1754912158::0::1::::<><>::res://Scenes/authetification.gd
+authetification.tscn::PackedScene::5087583911276780160::1754952340::0::1::::<><>::res://Scenes/authetification.gd
 gallery.gd::GDScript::-1::1754888395::0::1::::<>Control<>::
-gallery.tscn::PackedScene::695238433648786009::1754912167::0::1::::<><>::res://Scenes/gallery.gd<>uid://b8c7gfjm3334v::::res://Assets/profile.png<>uid://bd05d1ohjbkc::::res://Assets/home.png<>uid://dyro6sm27i2aj::::res://Assets/controls.png
-game.gd::GDScript::-1::1754910659::0::1::::<>Control<>::
-game.tscn::PackedScene::6826775146427884944::1754912167::0::1::::<><>::res://Scenes/game.gd<>uid://dn64ox4th4yti::::res://Assets/Flag Outlines/2-3 Flag Outline.png<>uid://bd05d1ohjbkc::::res://Assets/home.png<>uid://dyro6sm27i2aj::::res://Assets/controls.png<>uid://dtvagwovd2sen::::res://Assets/world-flags.png<>uid://cx80rrx22p837::::res://Assets/Flags/EASY/argentina.png
-home_screen.gd::GDScript::-1::1754904747::0::1::::<>Control<>::
-home_screen.tscn::PackedScene::6754537892934097715::1754912167::0::1::::<><>::res://Scenes/home_screen.gd<>uid://b8c7gfjm3334v::::res://Assets/profile.png
-::res://UI Elements/::1754912167
+gallery.tscn::PackedScene::695238433648786009::1754952341::0::1::::<><>::res://Scenes/gallery.gd<>uid://b8c7gfjm3334v::::res://Assets/profile.png<>uid://bd05d1ohjbkc::::res://Assets/home.png<>uid://dyro6sm27i2aj::::res://Assets/controls.png
+game.gd::GDScript::-1::1754949558::0::1::::<>Control<>::
+game.tscn::PackedScene::6826775146427884944::1754952340::0::1::::<><>::res://Scenes/game.gd<>uid://dn64ox4th4yti::::res://Assets/Flag Outlines/2-3 Flag Outline.png<>uid://bd05d1ohjbkc::::res://Assets/home.png<>uid://dyro6sm27i2aj::::res://Assets/controls.png<>uid://dtvagwovd2sen::::res://Assets/world-flags.png<>uid://cx80rrx22p837::::res://Assets/Flags/EASY/argentina.png
+home_screen.gd::GDScript::-1::1754944652::0::1::::<>Control<>::
+home_screen.tscn::PackedScene::6754537892934097715::1754952340::0::1::::<><>::res://Scenes/home_screen.gd<>uid://b8c7gfjm3334v::::res://Assets/profile.png
+::res://UI Elements/::1754952341
 color_swatch.gd::GDScript::-1::1753252595::0::1::::<>Button<>::
 color_swatch.tscn::PackedScene::4001377024680160986::1753350584::0::1::::<><>::res://UI Elements/color_swatch.gd
 gallery_image.gd::GDScript::-1::1754887552::0::1::::<>Control<>::
-gallery_image.tscn::PackedScene::2799629602674512769::1754912167::0::1::::<><>::res://UI Elements/gallery_image.gd<>uid://bat3a1wfibf0j::::res://icon.svg
+gallery_image.tscn::PackedScene::2799629602674512769::1754952341::0::1::::<><>::res://UI Elements/gallery_image.gd<>uid://bat3a1wfibf0j::::res://icon.svg
 ::res://Updates/::1754912668
